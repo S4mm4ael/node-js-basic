@@ -1,4 +1,3 @@
-const { rejects } = require('assert')
 const fs = require('fs')
 const path = require('path')
 
@@ -41,7 +40,7 @@ console.log('start')
 //   }
 // })
 
-const writeFileAsync = async (path, data) => {
+export const writeFileAsync = async (path, data) => {
   return new Promise((resolve, reject) => fs.writeFile(path, data, (err) => {
     if (err) {
       return reject(err.message)
@@ -50,7 +49,7 @@ const writeFileAsync = async (path, data) => {
   }))
 }
 
-const appendFileAsync = async (path, data) => {
+export const appendFileAsync = async (path, data) => {
   return new Promise((resolve, reject) => fs.appendFile(path, data, (err) => {
     if (err) {
       return reject(err.message)
@@ -63,7 +62,7 @@ const appendFileAsync = async (path, data) => {
 //   .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), ' data 2'))
 //   .catch(err => console.log(err))
 
-const readFileAsync = async (path) => {
+export const readFileAsync = async (path) => {
   return new Promise((resolve, reject) => fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
     if (err) {
       return reject(err.message)
