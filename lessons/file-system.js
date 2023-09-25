@@ -21,4 +21,13 @@ console.log('start')
 //   }
 // })
 
+fs.writeFile(path.resolve(__dirname, 'test.txt'), 'qwerty 1 2 3', (err) => {
+  if (err) {
+    throw err
+  }
+  else {
+    console.log("File added")
+  }
+})
+
 console.log('end')
