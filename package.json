@@ -4,7 +4,7 @@
   "description": "learning",
   "main": "test.js",
   "scripts": {
-    "start": "node ./lessons/files-practise.js"
+    "start": "node ./lessons/os.js"
   },
   "author": "Semion Krapivin",
   "license": "ISC",
