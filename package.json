@@ -4,7 +4,7 @@
   "description": "learning",
   "main": "test.js",
   "scripts": {
-    "start": "node ./lessons/events.js HELLO-WORLD"
+    "start": "node ./lessons/threads.js"
   },
   "author": "Semion Krapivin",
   "license": "ISC",
