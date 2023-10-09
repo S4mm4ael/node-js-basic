@@ -18,6 +18,9 @@ emitter.emit('message')
 emitter.emit('message')
 emitter.emit('message')
 
+emitter.removeAllListeners()
+emitter.removeListener('message', () => { })
+
 // if (MESSAGE) {
 //   emitter.emit('message', MESSAGE, 123)
 // } else {
