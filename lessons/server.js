@@ -1,6 +1,4 @@
-const http = require('http');
-const EventEmitter = require('events');
-const Router = require('../framework/Router')
+const userRouter = require('../src/user-router')
 const Application = require('../framework/Application')
 
 
@@ -8,17 +6,9 @@ const PORT = 5000;
 
 const app = new Application()
 
-const router = new Router();
-
-router.get("/users", (req, res) => {
-  res.end("YOU SEND REQUEST TO /USERS")
-})
-router.get("/posts", (req, res) => {
-  res.end("YOU SEND REQUEST TO /POSTS")
-})
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`))
-app.addRouter(router)
+app.addRouter(userRouter)
 
 // const server = http.createServer(
 
