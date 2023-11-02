@@ -13,7 +13,11 @@ router.get('/users', (req, res) => {
   res.send(users)
 })
 router.post('/users', (req, res) => {
+  const user = req.body;
+  console.log(user)
   res.send(users)
+  users.push(user)
+  res.send(user)
 })
 
 module.exports = router
