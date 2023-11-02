@@ -6,17 +6,14 @@ const users =
   [
     { id: 1, username: 'Sam' },
     { id: 2, username: 'Alex' },
-    { id: 3, username: 'Alndrey' },
+    { id: 3, username: 'Andrey' },
   ]
 
 router.get('/users', (req, res) => {
-  res.writeHead(200, {
-    'Content-type': 'application/json'
-  })
-  res.end(JSON.stringify(users))
+  res.send(users)
 })
 router.post('/users', (req, res) => {
-  res.end(JSON.stringify(users))
+  res.send(users)
 })
 
 module.exports = router
