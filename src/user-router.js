@@ -2,7 +2,7 @@ const Router = require("../framework/Router")
 
 const router = new Router()
 
-const users =
+let users =
   [
     { id: 1, username: 'Sam' },
     { id: 2, username: 'Alex' },
@@ -10,14 +10,15 @@ const users =
   ]
 
 router.get('/users', (req, res) => {
+  console.log(req.params)
   res.send(users)
+  console.log(users)
 })
 router.post('/users', (req, res) => {
+  console.log(req.body)
   const user = req.body;
-  console.log(user)
-  res.send(users)
   users.push(user)
-  res.send(user)
+  res.send(users)
 })
 
 module.exports = router
