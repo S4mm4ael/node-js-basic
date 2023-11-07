@@ -1,18 +1,13 @@
-let users =
-  [
-    { id: 1, username: 'Sam' },
-    { id: 2, username: 'Alex' },
-    { id: 3, username: 'Andrey' },
-  ]
+const User = require('./user-model')
 
-const getUsers = (req, res) => {
+const getUsers = async (req, res) => {
   if (req.params.id) {
     return res.send(users.find(user => user.id == req.params.id))
   }
   res.send(users)
 }
 
-const createUser = (req, res) => {
+const createUser = async (req, res) => {
   console.log(req.body)
   const user = req.body;
   users.push(user)
